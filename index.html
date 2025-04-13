@@ -18,8 +18,8 @@
   </header>
 
   <div class="container">
-    <form class="box" onsubmit="setCookieAndRedirect(event)">
-      <h2>Start Your Quiz</h2>
+    <form class="box" onsubmit="saveInfoAndStart(event)">
+      <h2 id="title">Start Your Quiz</h2> 
 
       <div class="form-group">
         <label for="name">Your Name:</label>
@@ -28,21 +28,21 @@
 
       <div class="form-group">
         <label>Select Difficulty:</label>
-        <div class="button-group" id="difficulty-buttons">
-          <button type="button" data-value="easy">Easy</button>
-          <button type="button" data-value="medium">Medium</button>
-          <button type="button" data-value="hard">Hard</button>
+        <div class="button-group" id="difficulty-group">
+          <input type="button" value="Easy" onclick="chooseDifficulty('easy', this)" />
+          <input type="button" value="Medium" onclick="chooseDifficulty('medium', this)" />
+          <input type="button" value="Hard" onclick="chooseDifficulty('hard', this)" />
         </div>
       </div>
 
       <div class="form-group">
         <label>Select Topic:</label>
-        <div class="button-group" id="topic-buttons">
-          <button type="button" data-value="branch1">Branch 1</button>
-          <button type="button" data-value="branch2">Branch 2</button>
-          <button type="button" data-value="branch3">Branch 3</button>
-          <button type="button" data-value="branch4">Branch 4</button>
-          <button type="button" data-value="branch">Branch</button>
+        <div class="button-group" id="topic-group">
+          <input type="button" value="Branch 1" onclick="chooseTopic('branch1', this)" />
+          <input type="button" value="Branch 2" onclick="chooseTopic('branch2', this)" />
+          <input type="button" value="Branch 3" onclick="chooseTopic('branch3', this)" />
+          <input type="button" value="Branch 4" onclick="chooseTopic('branch4', this)" />
+          <input type="button" value="Branch" onclick="chooseTopic('branch', this)" />
         </div>
       </div>
 
@@ -57,40 +57,68 @@
   </footer>
 
   <script>
-    let selectedDifficulty = "";
-    let selectedTopic = "";
+    var selectedDifficulty = ""; 
+    var selectedTopic = "";
+    var nameInput = document.getElementById("name"); 
+    var title = document.getElementById("title");
 
-    document.querySelectorAll('#difficulty-buttons button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('#difficulty-buttons button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        selectedDifficulty = btn.getAttribute('data-value');
-      });
+  
+    nameInput.addEventListener("input", function() {
+      var typedName = nameInput.value; 
+      if (typedName.length > 0) {
+        title.textContent = "Start your quiz, " + typedName + "!"; 
+      } else {
+        title.textContent = "Start Your Quiz";
+      }
     });
 
-    document.querySelectorAll('#topic-buttons button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('#topic-buttons button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        selectedTopic = btn.getAttribute('data-value');
-      });
-    });
+  
+    function chooseDifficulty(difficulty, element) {
+      selectedDifficulty = difficulty; 
 
-    function setCookieAndRedirect(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value;
+    
+      var allButtons = document.getElementById("difficulty-group").children;
+      for (var i = 0; i < allButtons.length; i++) {
+        allButtons[i].classList.remove("active");
+      }
 
-      if (!selectedDifficulty || !selectedTopic) {
+      element.classList.add("active"); 
+    }
+
+   
+    function chooseTopic(topic, element) {
+      selectedTopic = topic; 
+
+     
+      var allButtons = document.getElementById("topic-group").children;
+      for (var i = 0; i < allButtons.length; i++) {
+        allButtons[i].classList.remove("active"); 
+      }
+
+      element.classList.add("active"); 
+    }
+
+  
+    function saveInfoAndStart(event) {
+      event.preventDefault(); 
+
+      var name = nameInput.value; 
+
+    
+      if (selectedDifficulty === "" || selectedTopic === "") {
         alert("Please select both difficulty and topic.");
         return;
       }
 
+    
       document.cookie = "username=" + encodeURIComponent(name) + "; path=/";
       document.cookie = "difficulty=" + selectedDifficulty + "; path=/";
       document.cookie = "topic=" + selectedTopic + "; path=/";
 
-      alert("Cookies set! You can now proceed to the quiz.");
-  
+    
+      alert("You can now proceed to your chooses quiz. Goodluck, " + name + "!.");
+
+    
     }
   </script>
 
