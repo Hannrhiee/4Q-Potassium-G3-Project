@@ -17,14 +17,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 16px 32px;
   box-shadow: 0 2px 5px rgba(255, 105, 135, 0.5);
   position: relative;
 }
 
 header .logo {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 19px;
   color: white;
   flex: 1;
 }
@@ -36,7 +36,7 @@ header nav {
 }
 
 header nav a {
-  margin: 0 1rem;
+  margin: 0 16px;
   text-decoration: none;
   color: white;
   font-weight: 500;
@@ -47,7 +47,7 @@ header nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 32px;
 }
 
 .box {
