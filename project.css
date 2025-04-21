@@ -7,6 +7,7 @@
 }
 
 body {
+  background-color: #082567;
   background-image: url(csigma.jpg);
   background-size: cover;
   display: flex;
@@ -132,7 +133,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #ff3366;
+  background-color: #082567;
 }
 
 footer {
