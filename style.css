@@ -1,4 +1,5 @@
-* {
+*
+{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -6,20 +7,18 @@
 }
 
 body {
-  background-color: #ffe6f0;
+  background-image: url(BG-2.png);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 header {
-  background-color: #ffb6c1;
+  background-image: none;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: right;
   padding: 16px 32px;
-  box-shadow: 0 2px 5px rgba(255, 105, 135, 0.5);
-  position: relative;
 }
 
 header .logo {
@@ -31,12 +30,18 @@ header .logo {
 
 header nav {
   position: absolute;
-  left: 50%;
+  right: -5%;
   transform: translateX(-50%);
 }
 
+header nav :hover {
+  background-color: #ff3366;
+  background-size: contain;
+  border-radius: 5px;
+}
+
 header nav a {
-  margin: 0 16px;
+  margin: 0 15px;
   text-decoration: none;
   color: white;
   font-weight: 500;
