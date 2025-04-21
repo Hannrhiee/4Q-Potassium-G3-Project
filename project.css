@@ -107,13 +107,13 @@ input[type="text"] {
 }
 
 .button-group input[type="button"]:hover {
-  background-color: #ffc0cb;
+  background-color: #2E5090;
 }
 
 .button-group input[type="button"].active {
-  background-color: #ff69b4;
+  background-color:#2E5090;
   color: white;
-  box-shadow: 0 0 10px #ff69b4;
+  box-shadow: 0 0 10px #2E5090;
 }
 
 .play-button {
@@ -124,7 +124,7 @@ input[type="submit"] {
   padding: 0.5rem 1.5rem;
   border: none;
   border-radius: 8px;
-  background-color: #ff6699;
+  background-color:#5072A7;
   color: white;
   cursor: pointer;
   font-weight: bold;
@@ -133,7 +133,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #082567;
+  background-color: #2E5090;
 }
 
 footer {
