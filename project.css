@@ -7,7 +7,6 @@
 }
 
 body {
-  background-color: #082567;
   background-image: url(csigma.jpg);
   background-size: cover;
   display: flex;
@@ -16,6 +15,7 @@ body {
 }
 
 header {
+  background-color: #082567;
   background-image: none;
   display: flex;
   align-items: right;
@@ -139,7 +139,7 @@ input[type="submit"]:hover {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #ffb6c1;
+  background-color: #082567;
   color: white;
   font-weight: bold;
 }
