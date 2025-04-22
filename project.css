@@ -14,7 +14,12 @@ body {
   min-height: 100vh;
 }
 
-
+header {
+  background-image: none;
+  display: flex;
+  align-items: right;
+  padding: 16px 32px;
+}
 
 header .logo {
   font-weight: bold;
