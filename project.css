@@ -36,7 +36,7 @@ header nav {
 }
 
 header nav :hover {
-  background-color: #ff3366;
+  background-color: #b0c4de;
   background-size: contain;
   border-radius: 5px;
 }
