@@ -30,7 +30,7 @@ header nav {
 }
 
 header nav :hover {
-  background-color: #b0c4de;
+  background-color: white;
   background-size: contain;
   border-radius: 5px;
 }
@@ -51,7 +51,7 @@ header nav a {
 }
 
 .box {
-  background-color:white;
+  background-color:#b0c4de;
   padding: 32px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(255, 105, 135, 0.4);
