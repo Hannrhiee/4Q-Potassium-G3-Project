@@ -16,6 +16,7 @@ body {
 
 header {
   background-image: none;
+  background-color: #082567;
   display: flex;
   align-items: right;
   padding: 16px 32px;
