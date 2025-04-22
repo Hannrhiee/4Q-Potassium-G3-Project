@@ -1,6 +1,4 @@
-
-*
-{
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,7 +6,7 @@
 }
 
 body {
-  background-image: url(projphotos/csigma.jpg);
+  background-image: url(BG-2.png);
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -17,7 +15,6 @@ body {
 
 header {
   background-image: none;
-  background-color: #082567;
   display: flex;
   align-items: right;
   padding: 16px 32px;
@@ -37,7 +34,7 @@ header nav {
 }
 
 header nav :hover {
-  background-color: white;
+  background-color: #ff3366;
   background-size: contain;
   border-radius: 5px;
 }
@@ -58,8 +55,8 @@ header nav a {
 }
 
 .box {
-  background-color:#b0c4de;
-  padding: 32px;
+  background-color: #ffccda;
+  padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(255, 105, 135, 0.4);
   width: 100%;
@@ -68,54 +65,53 @@ header nav a {
 
 .box h2 {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   color: #444;
 }
 
 .form-group {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 8;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 input[type="text"] {
   width: 100%;
-  padding: 10px;
+  padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
 
 .button-group {
-  background-color: white;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .button-group input[type="button"] {
   flex: 1;
   min-width: 80px;
-  padding: 8px;
+  padding: 0.5rem;
   border: none;
   border-radius: 8px;
-  background-color: #b0c4de;
+  background-color: #fff0f5;
   color: #333;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .button-group input[type="button"]:hover {
-  background-color: #2E5090;
+  background-color: #ffc0cb;
 }
 
 .button-group input[type="button"].active {
-  background-color:#2E5090;
+  background-color: #ff69b4;
   color: white;
-  box-shadow: 0 0 10px #2E5090;
+  box-shadow: 0 0 10px #ff69b4;
 }
 
 .play-button {
@@ -123,10 +119,10 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-  padding: 8px 24px;
+  padding: 0.5rem 1.5rem;
   border: none;
   border-radius: 8px;
-  background-color:#5072A7;
+  background-color: #ff6699;
   color: white;
   cursor: pointer;
   font-weight: bold;
@@ -135,20 +131,20 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #2E5090;
+  background-color: #ff3366;
 }
 
 footer {
   text-align: center;
-  padding: 16px;
-  background-color: #082567;
+  padding: 1rem;
+  background-color: #ffb6c1;
   color: white;
   font-weight: bold;
 }
 
 @media (max-width: 600px) {
   .box {
-    padding: 24px;
+    padding: 1.5rem;
   }
 
   header nav a {
