@@ -157,6 +157,7 @@ header {
     padding: 10px;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 .logo {
@@ -197,6 +198,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    z-index: 1;
 }
 
 
