@@ -25,7 +25,8 @@ body {
   box-shadow: 0 8px 20px rgba(0, 128, 128, 0.5);
 }
 
- #bj-video {
+
+#bj-video {
   position: fixed;
   top: 0;
   left: 0;
@@ -34,6 +35,7 @@ body {
   z-index: -1;
   object-fit: cover;
 }
+
 
 
 #highscore-board h2 {
