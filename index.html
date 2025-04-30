@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="author" content="Group 3">
+   <meta name="keywords" content="HTML, CSS, JavaScript">
+   <meta name="revised" content="01-22-25">
+   <title>Equation X Explosion</title>
+   <link rel="stylesheet" href="style.css" />  
+   
+ </head>
+ <body onload="move()">  
+	
+  </header>
+
+    <div style="margin: -10px; align-content: center;">
+        
+      <video autoplay muted loop id='backgroundvideo'>
+        <source src="csprojimage.mp4" type="video/mp4">
+          your browser does no support HTML5 video.
+      </video>
+    </div>
+
+    <div class="topnav">
+      <div class="logo">
+        <img src="./projphotos/logoproj.png" alt="Website Logo">
+      </div>      
+      <a class="active" href="./index.html">Home</a>    
+      <div class="topnav-right">
+        <a href="./About.html">About</a>
+        <a href="./contacts.html">Contacts</a>
+      </div>
+    </div>
+ 
+
+    
+    <div id="displayScore">
+      <h2 id="displayScore_Label">Hi score to beat</h2>
+    </div>
+  
+    <div id="myProgress">
+      <div id="myBar"></div>
+    </div>
+  
+   <!-- <div id="highscore-board">
+     <h2>HI SCORE</h2>
+     <ol id="score-list">
+       <li>Loading...</li>
+     </ol>
+   </div> -->
+ 
+   <div class="container">
+     <form class="box" onsubmit="saveInfoAndStart(event)">
+       <h2 id="title" style="font-family: 'Dancing Script', cursive;">Start Your Quiz</h2>
+       <div class="form-group">
+         <label for="name">Your Name:</label>
+         <input type="text" id="name" required />
+       </div>
+ 
+       <div class="form-group">
+         <label>Select Difficulty:</label>
+         <div class="button-group" id="difficulty-group">
+           <input type="button" value="Easy" onclick="chooseDifficulty('easy', this)" />
+           <input type="button" value="Medium" onclick="chooseDifficulty('medium', this)" />
+           <input type="button" value="Hard" onclick="chooseDifficulty('hard', this)" />
+         </div>
+       </div>
+ 
+       <div class="form-group">
+         <label>Select Topic:</label>
+         <div class="button-group" id="topic-group">
+           <input type="button" value="Algebra" onclick="chooseTopic('Algebra', this)" />
+           <input type="button" value="Geometry" onclick="chooseTopic('Geometry', this)" />
+           <input type="button" value="Statistics" onclick="chooseTopic('Statistics', this)" />
+           <input type="button" value="Theory" onclick="chooseTopic('Theory', this)" />
+           <input type="button" value="Trigonometry" onclick="chooseTopic('Trigonometry', this)" />
+         </div>
+       </div>
+ 
+       <div class="form-group play-button">
+         <!-- <input type="submit" value="Play" onclick="document.location='quiz.html'"/> -->
+         <input type="submit" value="Play"/>
+       </div>
+     </form>
+   </div>
+   
+   <section>
+  
+
+   
+ 
+   <footer>
+    <p>Copyright ©group3. All rights reserved.</p>
+   </footer>
+ 
+   <script>
+    function setCookie(cname,cvalue,exdays) {
+      const d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      let expires = "expires=" + d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    
+    function getCookie(cname) {
+      let name = cname + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+    
+    function checkCookie() {
+      let user = getCookie("username");
+      if (user != "") {
+        alert("Welcome again " + user);
+      } else {
+        user = prompt("Please enter your name:","");
+        if (user != "" && user != null) {
+          setCookie("username", user, 30);
+        }
+      }
+    }
+   </script>
+   <script>
+     var selectedDifficulty = "";
+     var selectedTopic = "";
+ 
+     var nameInput = document.getElementById("name");
+     var title = document.getElementById("title");
+ 
+     nameInput.addEventListener("input", function () {
+       var typedName = nameInput.value;
+       if (typedName.length > 0) {
+         title.textContent = "Start your quiz, " + typedName + "!";
+       } else {
+         title.textContent = "Start Your Quiz";
+       }
+     });
+ 
+     function chooseDifficulty(difficulty, element) {
+       selectedDifficulty = difficulty;
+       var allButtons = document.getElementById("difficulty-group").children;
+       for (var i = 0; i < allButtons.length; i++) {
+         allButtons[i].classList.remove("active");
+       }
+       element.classList.add("active");
+     }
+ 
+     function chooseTopic(topic, element) {
+       selectedTopic = topic;
+       var allButtons = document.getElementById("topic-group").children;
+       for (var i = 0; i < allButtons.length; i++) {
+         allButtons[i].classList.remove("active");
+       }
+       element.classList.add("active");
+     }
+ 
+     function saveInfoAndStart(event) {
+       event.preventDefault();
+       var name = nameInput.value;
+       if (selectedDifficulty === "" || selectedTopic === "") {
+         alert("Please select both difficulty and topic.");
+         return;
+       }
+       localStorage.setItem("username", encodeURIComponent(name));
+       localStorage.setItem("difficulty",selectedDifficulty);
+       localStorage.setItem("topic", selectedTopic);
+      
+       alert("You can now proceed to your chosen quiz. Good luck, " + name + "!.");
+       
+       window.location.href = "quiz.html";
+     }
+   </script>
+
+   <script>
+    function clearInfo(){
+      localStorage.setItem("username", null);
+      localStorage.setItem("difficulty",null);
+      localStorage.setItem("topic", null);
+
+      let currentScore=localStorage.getItem("HighScore");
+      if (currentScore==null) {
+        currentScore=0
+      }
+      document.getElementById("displayScore_Label").innerHTML = `Hi score to beat ${currentScore}`;
+    }
+
+    var i = 0;
+    function move() {
+      if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBar");
+      var width = 1;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          i = 0;
+          elem.style.display = "none";
+          clearInfo();          
+        } else {
+          width++;
+          elem.style.width = width + "%";
+        }
+      }      
+      }
+    }
+    </script>
+ </body>
+ </html>
