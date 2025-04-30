@@ -20,10 +20,10 @@ let timeLeft = 60; // Timer countdown for hard questions (60 seconds)
 const questionBank = {
   easy: {
     Algebra: [
-	  { question: "What is 2 + 2?", answers: ["3", "4", "5", "6"], correctAnswer: 1 },
+      { question: "What is 2 + 2?", answers: ["3", "4", "5", "6"], correctAnswer: 1 },
       { question: "What is 3 + 1?", answers: ["2", "3", "4", "5"], correctAnswer: 2 },
       { question: "What is 5 + 7?", answers: ["12", "13", "14", "15"], correctAnswer: 0 }
-	  { question: "Simplify: (2x^2)(3x^3)", choices: ["5x^5", "6x^5", "6x^6", "x^6"], answer: "6x^5" },
+      { question: "Simplify: (2x^2)(3x^3)", choices: ["5x^5", "6x^5", "6x^6", "x^6"], answer: "6x^5" },
       { question: "Which is the solution to x^2 = 49?", choices: ["7", "-7", "±7", "0"], answer: "±7" },
       { question: "What is the domain of f(x) = 1 / (x - 2)?", choices: ["All real numbers", "All real numbers except 2", "All real numbers except 0", "All real numbers except ±2"], answer: "All real numbers except 2" },
       { question: "Expand: (x + 1)^2", choices: ["x^2 + 1", "x^2 + 2x + 1", "x^2 + 2", "x^2 + x + 1"], answer: "x^2 + 2x + 1" },
@@ -32,7 +32,7 @@ const questionBank = {
       { question: "Which of the following is a solution to (x - 1)(x + 4) = 0?", choices: ["-1", "1", "-4", "0"], answer: "-4" }
     ],
     Geometry: [
-       { question: "The area of a rectangle with length 6 cm and width 3 cm is:", choices: ["15 cm²", "18 cm²", "12 cm²", "9 cm²"], answer: "18 cm²" },
+      { question: "The area of a rectangle with length 6 cm and width 3 cm is:", choices: ["15 cm²", "18 cm²", "12 cm²", "9 cm²"], answer: "18 cm²" },
       { question: "What is the perimeter of a square with side length 5 cm?", choices: ["15 cm", "10 cm", "20 cm", "25 cm"], answer: "20 cm" },
       { question: "What is the area of a triangle with a base of 4 cm and a height of 6 cm?", choices: ["10 cm²", "20 cm²", "12 cm²", "24 cm²"], answer: "12 cm²" },
       { question: "What is the volume of a cube with a side length of 2 cm?", choices: ["4 cm³", "8 cm³", "6 cm³", "10 cm³"], answer: "8 cm³" },
@@ -85,7 +85,7 @@ const questionBank = {
       { question: "What is 5 + 7?", answers: ["10", "11", "12", "13", "14"], correctAnswer: 2 },
       { question: "What is 9 + 3?", answers: ["9", "10", "11", "12", "13"], correctAnswer: 3 },
       { question: "What is 4 * 3?", answers: ["10", "12", "14", "16", "18"], correctAnswer: 1 },
-	  { question: "If f(x) = x^2 - 2x, find f(a + 1)", choices: ["a^2 - 1", "a^2 + 1", "a^2 + 1 - 2a", "a^2 + 2a - 1", "a^2 + 1 - 2a + 1"], answer: "a^2 + 2a - 1" },
+      { question: "If f(x) = x^2 - 2x, find f(a + 1)", choices: ["a^2 - 1", "a^2 + 1", "a^2 + 1 - 2a", "a^2 + 2a - 1", "a^2 + 1 - 2a + 1"], answer: "a^2 + 2a - 1" },
       { question: "Find the roots of: x^2 - x - 6 = 0", choices: ["-3 and 2", "-2 and 3", "3 and 2", "-1 and -6", "1 and 6"], answer: "-3 and 2" },
       { question: "The expression (x^2 + x - 2)/(x - 1) simplifies to:", choices: ["x + 2", "x - 2", "x + 1", "x^2 + 1", "Cannot be simplified"], answer: "x + 2" },
       { question: "Solve: x^3 - 4x = 0", choices: ["0, 2, -2", "0, 4, -4", "0, 1, -4", "0, -2, 2", "0, 1, -1"], answer: "0, 2, -2" }
@@ -214,8 +214,7 @@ function displayQuestion(questionData) {
   else {
     inputField.innerHTML = `
       <input type="text" id="user-answer" placeholder="Your answer">
-      <button onclick="checkAnswerHard()">Submit</button>
-    `;
+      <button onclick="checkAnswerHard()">Submit</button> `;
     startTimer(); // Start the countdown timer for hard questions
   }
 }
