@@ -179,7 +179,7 @@ const questions = {
   }
 };
 
- // -------------------- Game State Variables --------------------
+ 
  let randomizedStatements = [];
  let currentStatementIndex = 0;
  let score = 0;
@@ -190,13 +190,13 @@ const questions = {
  let selectedTime = 150;
  let isGameActive = false;
 
- // Constants for guesses and skips
+
  const MAX_SKIPS = 2;
  const MAX_GUESSES = 5;
  let remainingSkips = MAX_SKIPS;
  let remainingGuesses = MAX_GUESSES;
 
- // -------------------- DOM Elements --------------------
+
  const introPage = document.getElementById('intro-page');
  const startGameButton = document.getElementById('start-game');
  const schoolLevelButtons = document.querySelectorAll('.level-button');
@@ -218,7 +218,7 @@ const questions = {
  const guessesElement = document.getElementById('guesses');
  const skipsElement = document.getElementById('skips');
 
- // -------------------- Audio Elements --------------------
+
  const backgroundSound = new Audio('spotifydown.com - boba date.mp3');
  const correctSound = new Audio('Correct Answer sound effect.mp3'); 
  const incorrectSound = new Audio('https://incorrect-sound.mp3'); 
@@ -226,7 +226,7 @@ const questions = {
  backgroundSound.loop = true; 
  incorrect-sound.mp3
 
- // -------------------- Event Listeners --------------------
+ 
  // School Level selection
  schoolLevelButtons.forEach(button => {
      button.addEventListener('click', () => selectSchoolLevel(button));
@@ -263,12 +263,10 @@ const questions = {
  // Skip button
  skipButton.addEventListener('click', handleSkip);
 
- // Remove the undefined handleKeyClick listener
- // keyboardElement.addEventListener('click', handleKeyClick); // Removed to fix the issue
-
+ 
  // Keyboard input
  document.addEventListener('keydown', handleKeyPress);
- // -------------------- Function Definitions --------------------
+ 
 
     // Select School Level
     function selectSchoolLevel(button) {
@@ -295,14 +293,14 @@ const questions = {
       checkStartButton();
   }
 
-  // Enable the start button if school level, mode, and time are selected
+ 
   function checkStartButton() {
       if (selectedSchoolLevel && selectedMode && selectedTime) {
           startGameButton.disabled = false;
       }
   }
 
-  // Show instructions screen
+
   function showInstructions() {
       introPage.style.display = 'none';
       instructionsContainer.style.display = 'block';
@@ -323,7 +321,7 @@ const questions = {
       backgroundSound.play();
   }
 
-  // Reset game state variables
+
   function resetGameState() {
       currentStatementIndex = 0;
       score = 0;
@@ -336,10 +334,9 @@ const questions = {
       skipButton.disabled = false;
   }
 
-  // Get statements based on selected school level and mode
   function getSelectedStatements() {
       if (selectedMode === 'all') {
-          // Combine all modes within the selected school level
+         
           return [
               ...statements[selectedSchoolLevel].bio,
               ...statements[selectedSchoolLevel].chem,
@@ -376,7 +373,7 @@ const questions = {
           const box = document.createElement('div');
           box.className = 'word-box';
           box.setAttribute('data-index', i);
-          box.textContent = '\u00A0'; // Non-breaking space to occupy space
+          box.textContent = '\u00A0'; 
           wordBoxesElement.appendChild(box);
       }
 
@@ -490,7 +487,7 @@ const questions = {
 //       }, 1000);
 //   }
 
-//   // Format time in MM:SS
+
 //   function formatTime(seconds) {
 //       const minutes = Math.floor(seconds / 60);
 //       const secs = seconds % 60;
@@ -576,4 +573,4 @@ const questions = {
       }
       return array;
   }
-// You sent
+
