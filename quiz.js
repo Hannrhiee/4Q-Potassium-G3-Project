@@ -1,4 +1,4 @@
-	 <script>	
+<script>	
     let difficulty = localStorage.getItem("difficulty");
     let topic = localStorage.getItem("topic");
     let username = localStorage.getItem("username");
