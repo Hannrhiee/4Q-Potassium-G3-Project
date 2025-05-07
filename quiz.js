@@ -23,10 +23,10 @@
     const questionBank = {
       easy: {
         Algebra: [
-	  { question: "What is 2 + 2?", answers: ["3", "4", "5", "6"], correctAnswer: 1 },
+      { question: "What is 2 + 2?", answers: ["3", "4", "5", "6"], correctAnswer: 1 },
       { question: "What is 3 + 1?", answers: ["2", "3", "4", "5"], correctAnswer: 2 },
       { question: "What is 5 + 7?", answers: ["12", "13", "14", "15"], correctAnswer: 0 }
-	  { question: "Simplify: (2x^2)(3x^3)", choices: ["5x^5", "6x^5", "6x^6", "x^6"], answer: "6x^5" },
+      { question: "Simplify: (2x^2)(3x^3)", choices: ["5x^5", "6x^5", "6x^6", "x^6"], answer: "6x^5" },
       { question: "Which is the solution to x^2 = 49?", choices: ["7", "-7", "±7", "0"], answer: "±7" },
       { question: "What is the domain of f(x) = 1 / (x - 2)?", choices: ["All real numbers", "All real numbers except 2", "All real numbers except 0", "All real numbers except ±2"], answer: "All real numbers except 2" },
       { question: "Expand: (x + 1)^2", choices: ["x^2 + 1", "x^2 + 2x + 1", "x^2 + 2", "x^2 + x + 1"], answer: "x^2 + 2x + 1" },
@@ -88,7 +88,7 @@
       { question: "What is 5 + 7?", answers: ["10", "11", "12", "13", "14"], correctAnswer: 2 },
       { question: "What is 9 + 3?", answers: ["9", "10", "11", "12", "13"], correctAnswer: 3 },
       { question: "What is 4 * 3?", answers: ["10", "12", "14", "16", "18"], correctAnswer: 1 },
-	  { question: "If f(x) = x^2 - 2x, find f(a + 1)", choices: ["a^2 - 1", "a^2 + 1", "a^2 + 1 - 2a", "a^2 + 2a - 1", "a^2 + 1 - 2a + 1"], answer: "a^2 + 2a - 1" },
+      { question: "If f(x) = x^2 - 2x, find f(a + 1)", choices: ["a^2 - 1", "a^2 + 1", "a^2 + 1 - 2a", "a^2 + 2a - 1", "a^2 + 1 - 2a + 1"], answer: "a^2 + 2a - 1" },
       { question: "Find the roots of: x^2 - x - 6 = 0", choices: ["-3 and 2", "-2 and 3", "3 and 2", "-1 and -6", "1 and 6"], answer: "-3 and 2" },
       { question: "The expression (x^2 + x - 2)/(x - 1) simplifies to:", choices: ["x + 2", "x - 2", "x + 1", "x^2 + 1", "Cannot be simplified"], answer: "x + 2" },
       { question: "Solve: x^3 - 4x = 0", choices: ["0, 2, -2", "0, 4, -4", "0, 1, -4", "0, -2, 2", "0, 1, -1"], answer: "0, 2, -2" }
@@ -135,7 +135,7 @@
       { question: "Solve for x: 2x + 3 = 7", correctAnswer: "x = 2" },
       { question: "Solve for x: 5x - 2 = 18", correctAnswer: "x = 4" },
       { question: "Solve for x: 3x + 5 = 20", correctAnswer: "x = 5" },
-	  { question: "Solve for x in the equation: x^4 - 10x^2 + 9 = 0", answer: "x = 3, -3, 1, -1" },
+      { question: "Solve for x in the equation: x^4 - 10x^2 + 9 = 0", answer: "x = 3, -3, 1, -1" },
       { question: "If f(x) = (x^3 - 6x^2 + 11x - 6), find all real values of x such that f(x) = 0", answer: "x = 1, 2, 3" },
       { question: "Find the sum of all real solutions to the equation: (x^2 - 4)^2 = 16", answer: "0" }
     ],
@@ -143,7 +143,7 @@
       { question: "Find the area of a triangle with base 8 and height 5.", correctAnswer: "Area = 20" },
       { question: "Find the volume of a cylinder with radius 3 and height 10.", correctAnswer: "Volume = 90π" },
       { question: "Find the perimeter of a rectangle with length 12 and width 8.", correctAnswer: "Perimeter = 40" },
-	  { question: "Calculate the surface area of a sphere with a radius of 5 cm.", answer: "314.16 cm²" },
+      { question: "Calculate the surface area of a sphere with a radius of 5 cm.", answer: "314.16 cm²" },
       { question: "The diagonals of a rhombus measure 8 cm and 10 cm. Find its area.", answer: "40 cm²" },
       { question: "Find the length of the side of a square inscribed in a circle with radius 5 cm.", answer: "7.07 cm" }
     ],
@@ -151,7 +151,7 @@
       { question: "What is the probability of rolling a 6 on a die?", correctAnswer: "1/6" },
       { question: "What is the mean of 2, 4, 6, 8, 10, 12?", correctAnswer: "7" },
       { question: "What is the variance of 3, 5, 7, 9?", correctAnswer: "5.25" },
-	  { question: "A deck contains 52 cards. Two cards are drawn without replacement. What is the probability that both are red cards?", answer: "1/17" },
+      { question: "A deck contains 52 cards. Two cards are drawn without replacement. What is the probability that both are red cards?", answer: "1/17" },
       { question: "If 5% of a population has a certain disease, what is the probability that in a sample of 5 people, at least one person has the disease?", answer: "0.226" },
       { question: "In a standard deck of 52 cards, what is the probability that a card drawn at random is either a King or a Heart?", answer: "4/13" }
     ],
@@ -159,7 +159,7 @@
       { question: "What is the second law of thermodynamics?", correctAnswer: "Entropy of an isolated system always increases" },
       { question: "What is the equation for acceleration?", correctAnswer: "a = (v - u) / t" },
       { question: "What is the law of universal gravitation?", correctAnswer: "F = G(m₁m₂) / r²" },
-	  { question: "Find the number of divisors of 10080.", answer: "48" },
+      { question: "Find the number of divisors of 10080.", answer: "48" },
       { question: "How many perfect squares are there between 1 and 100?", answer: "10" },
       { question: "What is the sum of the first 10 primes?", answer: "129" }
 	  
@@ -168,7 +168,7 @@
       { question: "What is the formula for the Law of Sines?", correctAnswer: "sin(A)/a = sin(B)/b = sin(C)/c" },
       { question: "Solve for all values of x in the interval from 0 to 2π (including 0 but less than 2π) that satisfy the equation: sin(x) + sin(3x) + sin(5x) = 0", correctAnswer: "x = 0 , pi/3, 2pi/3, pi, 4pi/3, 5pi/3" },
       { question: "What is the value of sin(60°)?", correctAnswer: "√3/2" },
-	  { question: "Prove the identity: cos²(x) - sin²(x) = cos(2x)", answer: "cos²(x) - sin²(x) = cos(2x)" },
+      { question: "Prove the identity: cos²(x) - sin²(x) = cos(2x)", answer: "cos²(x) - sin²(x) = cos(2x)" },
       { question: "Solve for θ if sin(θ) = √3/2 and θ is in the second quadrant.", answer: "θ = 120°" },
       { question: "Given that tan(θ) = 4/3, find sin(θ) and cos(θ).", answer: "sin(θ) = 4/5, cos(θ) = 3/5" }
     ]
